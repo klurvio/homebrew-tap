@@ -5,13 +5,13 @@
 class Sukko < Formula
   desc "Sukko WebSocket platform CLI"
   homepage "https://github.com/klurvio/sukko-cli"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/klurvio/sukko-cli/releases/download/v0.1.0/sukko_0.1.0_darwin_amd64.tar.gz"
-      sha256 "dd6bb8ed68e6c3f2729db63f0baa00f8f6d7eb155a1074218b75c60319e7e380"
+      url "https://github.com/klurvio/sukko-cli/releases/download/v0.2.0/sukko_0.2.0_darwin_amd64.tar.gz"
+      sha256 "f8ca679955d490f509a1b87f0ac30abd4281c5929c2a54e42162c1c9ac684ea1"
 
       define_method(:install) do
         bin.install "sukko"
@@ -19,8 +19,8 @@ class Sukko < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/klurvio/sukko-cli/releases/download/v0.1.0/sukko_0.1.0_darwin_arm64.tar.gz"
-      sha256 "0de5e63c4156f1974e92949d13f72071f3d430dac16d6fcf17535eeaa0bcfd5c"
+      url "https://github.com/klurvio/sukko-cli/releases/download/v0.2.0/sukko_0.2.0_darwin_arm64.tar.gz"
+      sha256 "cd83b9200423d215b172b0735f918f14c5a72395ded27a7c15cddc14ef450928"
 
       define_method(:install) do
         bin.install "sukko"
@@ -31,16 +31,16 @@ class Sukko < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/klurvio/sukko-cli/releases/download/v0.1.0/sukko_0.1.0_linux_amd64.tar.gz"
-      sha256 "b130c7148f0cf7f4eb8d16e8700f791d85fe9f8478d097e0da78cc08fb2d6831"
+      url "https://github.com/klurvio/sukko-cli/releases/download/v0.2.0/sukko_0.2.0_linux_amd64.tar.gz"
+      sha256 "865b13b260acf7590bee956449cacb38b1308f51e820fd21304fa47dfab94bb0"
       define_method(:install) do
         bin.install "sukko"
         generate_completions_from_executable(bin/"sukko", "completion")
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/klurvio/sukko-cli/releases/download/v0.1.0/sukko_0.1.0_linux_arm64.tar.gz"
-      sha256 "3bca6fc9c92356aee5d1dfb31661fe3271f61fdf7174a1cbacf5e18970dc5f52"
+      url "https://github.com/klurvio/sukko-cli/releases/download/v0.2.0/sukko_0.2.0_linux_arm64.tar.gz"
+      sha256 "0c91cb4317c595b5a817b3bf78dd80a5d491573b7e39d6af7fb2785ce5051c74"
       define_method(:install) do
         bin.install "sukko"
         generate_completions_from_executable(bin/"sukko", "completion")
